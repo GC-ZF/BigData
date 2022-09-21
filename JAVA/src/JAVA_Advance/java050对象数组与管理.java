@@ -29,7 +29,7 @@ public class java050对象数组与管理 {
         c.print();
 
         System.out.println("----updat----");
-        cm.update(new Chicken(1,"铁公鸡",20));
+        cm.update(new Chicken(1, "铁公鸡", 20));
         cm.printAll();
 
         System.out.println("----delete----");
@@ -69,12 +69,12 @@ class ChickenManger {
 
     //删除
     public void delete(int id) {
-        for(int i=0;i<count;i++){
-            if(cs[i].getId()==id){
-                for(int j=id-1;j<count;j++){
-                    cs[j]=cs[j+1];
+        for (int i = 0; i < count; i++) {
+            if (cs[i].getId() == id) {
+                for (int j = id - 1; j < count; j++) {
+                    cs[j] = cs[j + 1];
                 }
-                cs[count-1]=null;
+                cs[count - 1] = null;
                 count--;
                 break;
             }
