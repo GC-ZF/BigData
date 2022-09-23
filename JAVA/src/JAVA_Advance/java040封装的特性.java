@@ -24,7 +24,7 @@ public class java040封装的特性 {
 //没有封装之前
 class Person {
     //属性的封装
-    private String name;//成员变量，在类中定义
+    private String name;//成员变量，在类中定义，有初始值0
     private int age;//成员变量，在类中定义
 
     //对外提供一个为name属性设置的方法
@@ -36,7 +36,7 @@ class Person {
         return name;
     }
     public void run(int len){
-        int m=len;//参数len是和m都是局部变量
+        int m=len;//参数len是和m都是局部变量，需要赋值
         System.out.println("我跑了"+m+"米");
     }
     public void setAge(int age) {
