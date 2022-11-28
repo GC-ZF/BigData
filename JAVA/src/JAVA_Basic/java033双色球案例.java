@@ -70,7 +70,8 @@ public class java033双色球案例 {
         //统计结果
         //红球
         for (int i = 0; i < userRedBall.length; i++) {
-            for (int j = 0; j < sysRedBall.length; j++) {
+            for (int j = 0; j < sysRedBall.length - redCount; j++) {
+                //找到以后交换位置，减少73行sysRedBall.length - redCount比较次数
                 if (userRedBall[i] == sysRedBall[j]) {
                     int tmp = sysRedBall[j];
                     sysRedBall[j] = sysRedBall[sysRedBall.length - 1 - redCount];
@@ -142,7 +143,7 @@ public class java033双色球案例 {
             index = r.nextInt(redBall.length - i);
             userRedBall[i] = redBall[index];
 
-            //改变数组顺序，与倒数第i为交换，在下一次生成随机数时排除在外（142行）
+            //改变数组顺序，与倒数第i为交换，在下一次生成随机数时排除在外（143行）
             int tmp = redBall[index];
             redBall[index] = redBall[redBall.length - 1 - i];
             redBall[redBall.length - 1 - i] = tmp;

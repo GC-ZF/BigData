@@ -1,8 +1,4 @@
-一键格式化代码：Ctrl+Alt+L
-
-一键生成getter、setter等方法，需要先定义实体属性：Alt+Insert
-
-##　一、八种数据类型
+## 一、八种数据类型
 
 | Type  | byte | Type          |      |
 | ----- | ---- | ------------- | ---- |
@@ -13,7 +9,7 @@
 
 ## 二、运算符
 
-###　算数运算符
+### 算数运算符
 
 | Operator | Meant | Operator | Meant                         |
 | -------- | ----- | -------- | ----------------------------- |
@@ -595,7 +591,7 @@ public class Test {
 }
 ```
 
-
+### 双色球
 
 ```java
 /**
@@ -663,8 +659,10 @@ public class Test {
 
         //统计结果
         //红球
+
         for (int i = 0; i < userRedBall.length; i++) {
-            for (int j = 0; j < sysRedBall.length; j++) {
+            for (int j = 0; j < sysRedBall.length - redCount; j++) {
+                //找到以后交换位置，减少比较次数
                 if (userRedBall[i] == sysRedBall[j]) {
                     int tmp = sysRedBall[j];
                     sysRedBall[j] = sysRedBall[sysRedBall.length - 1 - redCount];
@@ -735,7 +733,7 @@ public class Test {
             index = r.nextInt(redBall.length - i);
             userRedBall[i] = redBall[index];
 
-            //改变数组顺序，与倒数第i为交换，在下一次生成随机数时排除在外（13行）
+            //改变数组顺序，与倒数第i为交换，在下一次生成随机数时排除在外（135行）
             int tmp = redBall[index];
             redBall[index] = redBall[redBall.length - 1 - i];
             redBall[redBall.length - 1 - i] = tmp;
