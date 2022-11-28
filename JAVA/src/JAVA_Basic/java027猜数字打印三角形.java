@@ -34,6 +34,11 @@ public class java027猜数字打印三角形 {
 
     /**
      * 数组示例：2、打印正三角形。
+     *     A
+     *    B B
+     *   C C C
+     *  D D D D
+     * E E E E E
      */
     public static void printTraingle(int num) {
         for (int i = 1; i <= num; i++) {

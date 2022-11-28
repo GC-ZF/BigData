@@ -31,6 +31,9 @@ public class java015位运算符 {
         System.out.println("num2=");
         int num2 = sc.nextInt();
         //方法一通过第三个变量交换
+        int tmp=num1;
+        num1=num2;
+        num2=tmp;
 
         //方法二
         num1 = num1 + num2 - (num2 = num1);
